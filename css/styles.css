@@ -1,0 +1,96 @@
+/* Skewed/slanted button styles
+//==================================================
+// Straight CSS solution for slanted buttons
+// Thanks: https://codepen.io/visualcookie/pen/JeoFt
+
+// Markup:
+// <a href="#change-me" class="btn"><span>Send</span></a>
+
+// NOTE: Don't forget to add vendor prefixes where appropriate.
+// NOTE: If your skewed boxes look a little jagged on your background,
+// -- consider adding a box-shadow with the same shadow color as your background
+// -- eg: box-shadow: 0 0 1px #fff;
+*/
+
+.logo {
+    height: 80px;
+    vertical-align: middle;
+}
+
+.btn {
+  color: #020202;
+  background: #eee;
+  /* font-weight: 700; */
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  /* font-size: 1.1rem; */
+  padding: 1px 35px;
+  display: inline-block;
+  transform: skew(-20deg);
+  
+  border-radius: 2px;
+  margin-left: 20px;
+
+  
+  /* Un-skew the text */
+}
+.btn:visited {
+  color: #fff;
+}
+.btn:hover {
+  background: #0069a8;
+}
+.btn > span {
+  display: inline-block;
+  transform: skew(25deg);
+}
+
+.left-bottom {
+   box-shadow: -6px 7px 0 1px #1B62DB;
+}
+
+/* Ignore everything below this line */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+ /* background-color: red; */
+ 
+  background-image: url("../img/RP-Grad-bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.each {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+
+.navbar {
+    background-color: unset;
+}
+
+.navbar-item img {
+    max-height: unset;
+}   
+
+.navbar-menu {
+    align-items: center;
+}
+
+#lin_grad {
+ 
+ /* Set the height of the div to
+    the entire screen */
+ height: 100vh;
+ 
+ /* linear-gradient syntax */
+    background-image:
+  linear-gradient(90deg, red, lightred, purple);
+  background-image: linear-gradient(90deg, red 0%,
+  lightred 50%, purple 100%);
+}
